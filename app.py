@@ -40,7 +40,7 @@ if st.button("Analyze News"):
         confidence_str = f"{confidence_val:.2f}%"
         
         # 4. Display Result (Matches your training: 1=REAL, 0=FAKE)
-        if prediction[0] == 0:
+        if prediction[0] == 1:
             result_text = "REAL"
             st.success(f"✅ This news appears to be {result_text}. (Confidence: {confidence_str})")
         else:
@@ -70,4 +70,5 @@ with col2:
     ### ⚠️ Disclaimer:
     This AI tool is for educational purposes. Machine learning models can make mistakes.
     """)
+
 
