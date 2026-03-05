@@ -30,8 +30,8 @@ if st.button("Analyze News"):
         prediction = model.predict(vectorized_text)
         
         # New: Calculate Confidence (Probability)
-        prediction = model.predict(vectorized_text)
-        confidence = max(prediction[0]) * 100
+        probability = model.predict_proba(vectorized_text)
+        confidence = max(probability[0]) * 100
         
         # Display Result (1=REAL, 0=FAKE for WELFake)
         if prediction[0] == 0:
